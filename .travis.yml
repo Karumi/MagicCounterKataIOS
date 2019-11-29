@@ -7,4 +7,4 @@ before_install:
 script:
   - swiftlint
   - xcrun simctl list
-  - set -o pipefail && xcodebuild -sdk iphonesimulator -project MagicCounterKataIOS.xcodeproj -scheme 'MagicCounterKataIOS' build test | xcpretty -c
+  - set -o pipefail && xcodebuild -project MagicCounterKataIOS.xcodeproj -scheme MagicCounterKataIOS -destination platform\=iOS\ Simulator,OS\=10.1,name\=iPad\ Pro\ \(9.7-inch\) build test | xcpretty
