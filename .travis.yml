@@ -1,10 +1,5 @@
 language: objective-c
-osx_image: xcode11
-
-before_install:
-  - gem install xcpretty
-
-script:
-  - swiftlint
-  - xcrun simctl list
-  - set -o pipefail && xcodebuild -project MagicCounterKataIOS.xcodeproj -scheme MagicCounterKataIOS -destination platform\=iOS\ Simulator,OS\=10.1,name\=iPad\ Pro\ \(9.7-inch\) build test | xcpretty
+osx_image: xcode11.2
+xcode_project: MagicCounterKataIOS.xcodeproj
+xcode_scheme: MagicCounterKataIOS
+xcode_destination: platform=iOS Simulator,name=iPhone 11
