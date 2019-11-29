@@ -7,4 +7,4 @@ before_install:
 script:
   - swiftlint
   - xcrun instruments -s devices
-  - set -o pipefail && xcodebuild -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 8" -project MagicCounterKataIOS.xcodeproj -scheme 'MagicCounterKataIOS' build test | xcpretty -c
+  - set -o pipefail && xcodebuild -sdk iphonesimulator -destination "platform=iOS Simulator,OS=13.0,name=iPhone 8" -project MagicCounterKataIOS.xcodeproj -scheme 'MagicCounterKataIOS' build test | xcpretty -c
