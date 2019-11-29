@@ -13,7 +13,11 @@
 		EBDB6EC72391422400DD548C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDB6EC52391422400DD548C /* Main.storyboard */; };
 		EBDB6EC92391422700DD548C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBDB6EC82391422700DD548C /* Assets.xcassets */; };
 		EBDB6ECC2391422700DD548C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDB6ECA2391422700DD548C /* LaunchScreen.storyboard */; };
-		EBDB6ED72391422700DD548C /* MagicCounterKataIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB6ED62391422700DD548C /* MagicCounterKataIOSTests.swift */; };
+		EBDB6ED72391422700DD548C /* DefaultsCounterStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB6ED62391422700DD548C /* DefaultsCounterStorageTests.swift */; };
+		EBDB6EE3239163A700DD548C /* CounterStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB6EE2239163A700DD548C /* CounterStorage.swift */; };
+		EBDB6EE52391647F00DD548C /* MagicCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB6EE42391647F00DD548C /* MagicCounter.swift */; };
+		EBDB6EE72391649100DD548C /* RandomNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB6EE62391649100DD548C /* RandomNumberGenerator.swift */; };
+		EBDB6EEA23916A6300DD548C /* MagicCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB6EE923916A6300DD548C /* MagicCounterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +40,12 @@
 		EBDB6ECB2391422700DD548C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBDB6ECD2391422700DD548C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBDB6ED22391422700DD548C /* MagicCounterKataIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicCounterKataIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBDB6ED62391422700DD548C /* MagicCounterKataIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCounterKataIOSTests.swift; sourceTree = "<group>"; };
+		EBDB6ED62391422700DD548C /* DefaultsCounterStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsCounterStorageTests.swift; sourceTree = "<group>"; };
 		EBDB6ED82391422700DD548C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBDB6EE2239163A700DD548C /* CounterStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterStorage.swift; sourceTree = "<group>"; };
+		EBDB6EE42391647F00DD548C /* MagicCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCounter.swift; sourceTree = "<group>"; };
+		EBDB6EE62391649100DD548C /* RandomNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberGenerator.swift; sourceTree = "<group>"; };
+		EBDB6EE923916A6300DD548C /* MagicCounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCounterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,7 @@
 		EBDB6EBE2391422400DD548C /* MagicCounterKataIOS */ = {
 			isa = PBXGroup;
 			children = (
+				EBDB6EE12391639600DD548C /* kata */,
 				EBDB6EBF2391422400DD548C /* AppDelegate.swift */,
 				EBDB6EC12391422400DD548C /* SceneDelegate.swift */,
 				EBDB6EC32391422400DD548C /* ViewController.swift */,
@@ -93,10 +102,29 @@
 		EBDB6ED52391422700DD548C /* MagicCounterKataIOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				EBDB6ED62391422700DD548C /* MagicCounterKataIOSTests.swift */,
+				EBDB6EE8239166B100DD548C /* kata */,
 				EBDB6ED82391422700DD548C /* Info.plist */,
 			);
 			path = MagicCounterKataIOSTests;
+			sourceTree = "<group>";
+		};
+		EBDB6EE12391639600DD548C /* kata */ = {
+			isa = PBXGroup;
+			children = (
+				EBDB6EE2239163A700DD548C /* CounterStorage.swift */,
+				EBDB6EE42391647F00DD548C /* MagicCounter.swift */,
+				EBDB6EE62391649100DD548C /* RandomNumberGenerator.swift */,
+			);
+			path = kata;
+			sourceTree = "<group>";
+		};
+		EBDB6EE8239166B100DD548C /* kata */ = {
+			isa = PBXGroup;
+			children = (
+				EBDB6ED62391422700DD548C /* DefaultsCounterStorageTests.swift */,
+				EBDB6EE923916A6300DD548C /* MagicCounterTests.swift */,
+			);
+			path = kata;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +228,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDB6EE52391647F00DD548C /* MagicCounter.swift in Sources */,
+				EBDB6EE3239163A700DD548C /* CounterStorage.swift in Sources */,
 				EBDB6EC42391422400DD548C /* ViewController.swift in Sources */,
 				EBDB6EC02391422400DD548C /* AppDelegate.swift in Sources */,
 				EBDB6EC22391422400DD548C /* SceneDelegate.swift in Sources */,
+				EBDB6EE72391649100DD548C /* RandomNumberGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +241,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBDB6ED72391422700DD548C /* MagicCounterKataIOSTests.swift in Sources */,
+				EBDB6EEA23916A6300DD548C /* MagicCounterTests.swift in Sources */,
+				EBDB6ED72391422700DD548C /* DefaultsCounterStorageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
