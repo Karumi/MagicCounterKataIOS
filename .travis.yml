@@ -1,0 +1,7 @@
+language: objective-c
+osx_image: xcode11.2
+xcode_project: MagicCounterKataIOS.xcodeproj
+xcode_scheme: MagicCounterKataIOS
+xcode_destination: platform=iOS Simulator,name=iPhone 11
+before_script:
+  - swiftlint
